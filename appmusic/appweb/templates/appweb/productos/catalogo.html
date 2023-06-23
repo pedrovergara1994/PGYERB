@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Catalogo</h1>
+    <a href="crearinstrumento">Ingresar instrumentos</a>
+
+    <div id="carrito-overlay">
+        <div id="carrito">
+          <h2>Tu carrito de compras</h2><button id="cerrar-carrito">Cerrar</button>
+          <ul id="lista-carrito"></ul>
+          <p id="total-carrito"></p>
+          <button id="vaciar-carrito">Vaciar Carrito</button>
+        </div>
+      </div>
+     
+
+            {% if instrumentos %}
+                {% for i in instrumentos %}
+                <div class="wrapper">
+                    <div>
+                        <h4>{{i.name}} Precio: ${{i.precio}}</h4>
+                        <img src="data:image/jpeg;base64,{{i.img}}" alt="{{i.name}}" width="10%" height="50%" />
+                        <button value="{{i.id}}" onclick="guardar('{{i}}')" >Agregar al carrito</button>
+                    </div>
+                </div>
+
+
+
+                {% endfor %}
+            {% endif%}
+    <link rel="stylesheet" href="{% static '/css/catalogo.css' %}">
+    <script src="{% static 'localStorage.js' %}"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pagina pincipal</title>
+</head>
+<body>
+<div class="nav">
+    <input type="checkbox">
+    <span></span>
+    <span></span>
+    <div class="menu">
+        <li><a href="">Inicio</a></li>
+        <li><a href="catalogo">Catalogo</a></li>
+        <li><a href="nosotros">Nosotros</a></li>
+        {% if cliente %}
+            <li><a href="micuenta">MiCuenta</a></li>
+            <li><a href="carrito">Carrito</a></li>
+            <button  >Logout</button>
+        {% else %}
+            <li><a href="login">Login</a></li>
+        {% endif %}
+
+    </div>
+    <p>{{cliente.rut}}</p>
+    {% for cli in cliente %}
+
+        <p>{{cli.rut}}</p>
+
+    {% endfor %}
+</div>
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</body>
+</html>

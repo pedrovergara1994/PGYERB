@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form role="form"  enctype="multipart/form-data" action="instrumento_save" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <div class="container">
+        <div style="text-align: center;">
+            <h1> Registrar Instrumento</h1>
+        </div>
+        <hr>
+        <label> Nombre </label>
+        <label>
+            <input type="text" name="name" placeholder="Nombre" size="20" required/>
+        </label>
+        <label> Descripcion: </label>
+        <label>
+            <input type="text" name="desc" placeholder="Descripcion" size="20" required/>
+        </label>
+        <label> Precio</label>
+        <label>
+            <input type="text" name="precio" placeholder="Precio" size="20" required>
+        </label>
+        <label>
+            Imagen :
+        </label>
+        <label>
+            <input type="file" name="imagen" accept="image/*" multiple>
+        </label>
+
+        {% csrf_token %}
+
+        <a href="{% url 'instrumento_save' %}">
+            <button type="submit" class="registerbtn">Registrars</button>
+        </a>
+        <br/>
+        <a href="catalogo">ir a Catalogo</a>
+    </div>
+</form>
+
+
+</body>
+</html>
