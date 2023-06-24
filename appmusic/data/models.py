@@ -11,8 +11,6 @@ class Instrumento(models.Model):
     desc = models.TextField(max_length=200)
     precio = models.IntegerField(null=True, blank=True)
     img = models.TextField( null=True, blank=True)
-    created_date = models.DateTimeField(
-        default=timezone.now)
 
 
 class Cliente(models.Model):
@@ -25,8 +23,17 @@ class Cliente(models.Model):
     create_date = models.DateTimeField(default=timezone.now)
 
 
-class Compra(models.Model):
-    user = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    instrumento = models.ForeignKey(Instrumento, on_delete=models.CASCADE)
-    desc = models.CharField(max_length=200)
+class Carrito(models.Model):
+    cliente_id = models.IntegerField(null=True, blank=True)
+    instrumentos = models.JSONField(null=True, blank=True)
     total = models.IntegerField(default=0)
+    created_date = models.DateTimeField(
+        default=timezone.now)
+
+
+class Compra(models.Model):
+    cliente_id = models.IntegerField(null=True, blank=True)
+    instrumentos = models.JSONField(null=True, blank=True)
+    total = models.IntegerField(default=0)
+    created_date = models.DateTimeField(
+        default=timezone.now)

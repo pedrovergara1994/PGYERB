@@ -16,12 +16,21 @@ def login_init(request):
     pwd = hashlib.new("sha256", clave)
     print(pwd.hexdigest())
     find_cliente = Cliente.objects.filter(mail=email, password=pwd.hexdigest())
-    print(find_cliente)
+    cliente = list(find_cliente.values())
+    print(cliente)
     if find_cliente:
-        return render(request, 'appweb/index.html', {"cliente": find_cliente})
+        request.session['cli-email'] = email
+        request.session['cli-name'] = cliente[0].get('first_name')
+        request.session['cli-last_name'] = cliente[0].get('last_name')
+        return render(request, 'appweb/index.html', {"cliente": find_cliente, "first_name": request.session.get('cli-name'),
+                                                     "last_name":  request.session.get('cli-last_name')})
     else:
         return render(request, 'appweb/session/login.html', {})
 
+
+# request.session.get('')
+
+# del request.session['']
 
 def register_save(request):
     print(request.POST['firstname'])
@@ -56,3 +65,11 @@ def register_save(request):
     else:
         cliente.save()
     return render(request, 'appweb/session/login.html', {})
+
+
+
+def logout(request):
+    del request.session['cli-email']
+    del request.session['cli-name']
+    del request.session['cli-last_name']
+    return render(request, 'appweb/index.html', {})

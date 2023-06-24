@@ -16,8 +16,8 @@ def index(request):
     return render(request, 'appweb/index.html', {})
 
 
-def index2(request):
-    return HttpResponse("Hola")
+def nosotros(request):
+    return render(request, 'appweb/nosotros.html', {})
 
 
 def login(request):

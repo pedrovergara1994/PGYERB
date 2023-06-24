@@ -11,7 +11,7 @@ body, .nav, .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%     !important;
+    width: 50% ;
 }
 
 .nav {
@@ -21,7 +21,7 @@ body, .nav, .menu {
     transition: 0.5s;
     border-radius: 50px;
     overflow: hidden;
-    width: 100% !important;
+    width: 40%;
     box-shadow: 0 8px 15px rgba(0,0,0,.2);
 }
 
@@ -34,7 +34,7 @@ body, .nav, .menu {
 }
 
 .nav input:checked ~ .menu {
-    width: 100% !important;
+    width: 80%;
 }
 
 .menu li {
@@ -55,8 +55,8 @@ body, .nav, .menu {
 }
 
 .nav input {
-    width: 140px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
     cursor: pointer;
     opacity: 0;
 }
@@ -84,7 +84,7 @@ body, .nav, .menu {
     transform: translateY(0) rotate(-45deg);
 }
 .nav span:nth-child(3) {
-    transform: translateY(8px);
+    transform: translateY(10px);
 }
 
 .nav input:checked ~ span:nth-child(3) {

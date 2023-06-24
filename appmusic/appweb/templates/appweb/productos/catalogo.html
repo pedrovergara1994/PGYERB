@@ -15,27 +15,30 @@
 
     <div id="carrito-overlay">
         <div id="carrito">
-          <h2>Tu carrito de compras</h2><button id="cerrar-carrito">Cerrar</button>
-          <ul id="lista-carrito"></ul>
+            <a href="{% url 'carrito_eliminar' %}" >Eliminar carrito</a>
+            <ul id="lista-carrito"></ul>
           <p id="total-carrito"></p>
-          <button id="vaciar-carrito">Vaciar Carrito</button>
+          <a href="{% url 'carrito_micarrito' %}" >Ir a mi carro de compras</a>
         </div>
       </div>
      
 
             {% if instrumentos %}
-                {% for i in instrumentos %}
+                {% for registro in instrumentos %}
                 <div class="wrapper">
                     <div>
-                        <h4>{{i.name}} Precio: ${{i.precio}}</h4>
-                        <img src="data:image/jpeg;base64,{{i.img}}" alt="{{i.name}}" width="10%" height="50%" />
-                        <button value="{{i.id}}" onclick="guardar('{{i}}')" >Agregar al carrito</button>
+                        <span><h4>{{registro.name}} Precio: ${{registro.precio}}</h4></span>
+                        <span><img src="data:image/jpeg;base64,{{registro.img}}" alt="{{registro.name}}" width="25%" height="60%" /></span>
+                        
+                        <a href="{% url 'carrito_agregar' registro.id %}" >al carrito</a>
+                        <a href="{% url 'eliminar_instrumento' registro.id %}" >Eliminar</a>
                     </div>
                 </div>
 
 
 
                 {% endfor %}
+                
             {% endif%}
     <link rel="stylesheet" href="{% static '/css/catalogo.css' %}">
     <script src="{% static 'localStorage.js' %}"></script>

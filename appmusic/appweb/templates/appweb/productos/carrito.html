@@ -8,6 +8,29 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="catalogo">Ir a Catalogo</a>
+    {% if micarrito %}
+    <span><h2>Total: ${{ total }}</h3>
+    <span>
+        <button>Pagar</button>
+    </span>    
+    {% for registro in micarrito %}
+    <div class="wrapper">
+        <div>
+            
+            <span><h2>{{registro.nombre}}</h4></span>
+            <span><h4>Cantidad: {{registro.cantidad}}</h4></span>
+            <span><h4>${{registro.monto}}</h4></span>
+            <span><img src="data:image/jpeg;base64,{{registro.imagen}}"  width="20%" height="60%" /></span>
+        </div>
+    </div>
 
+    
+
+    {% endfor %}
+    
+    {% else %}
+    <h1>Carrito vacio</h1>
+{% endif%}
 </body>
 </html>
