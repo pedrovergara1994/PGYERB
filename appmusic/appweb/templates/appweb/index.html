@@ -19,19 +19,15 @@
 
     {% endif %}
     <div class="nav">
-        <input type="checkbox">
-        <span></span>
-        <span></span>
+        
         <div class="menu">
-            <li><a href="">Inicio</a></li>
+            <li><a href="contacto">contacto</a></li>
             <li><a href="catalogo">Catalogo</a></li>
             <li><a href="nosotros">Nosotros</a></li>
-            {% if cliente %}
+            {% if first_name %}
                 <li><a href="micuenta">MiCuenta</a></li>
                 <li><a href="carrito">Carrito</a></li>
-                <li>
-                    <a href="logout"><input type="submit">Logout</input></a>
-                </li>
+                <li><a href="logout"><input type="submit">Logout</input></a></li>  
             {% else %}
                 <li><a href="login">Login</a></li>
             {% endif %}

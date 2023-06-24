@@ -7,6 +7,7 @@ from . import carrito
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('inicio', views.index, name='index'),
     path('login', views.login, name='login'),
     path('register', views.register, name='register'),
     path('nosotros', views.nosotros, name='nosotros'),
@@ -22,4 +23,5 @@ urlpatterns = [
     path('catalogo<int:registro_id>/', carrito.agregar_al_carrito, name='carrito_agregar'),
     path('carrito', carrito.ir_carrito, name='carrito_micarrito'),
     path('carrito_eliminar/', instrumentos.eliminar_carrito, name='carrito_eliminar'),
+    path('contacto', views.contacto, name='nosotros'),
 ]

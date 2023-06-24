@@ -8,3 +8,10 @@ from data.models import Cliente
 
 def micuenta(request):
     return render(request, 'appweb/micuenta/micuenta.html', {})
+
+
+def logout(request):
+    del request.session['cli-email']
+    del request.session['cli-name']
+    del request.session['cli-last_name']
+    return render(request, 'appweb/index.html', {})

@@ -1,26 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Nosotros</title>
 </head>
 <body>
     <div class="head">
 
-        <div class="logo">
-            <a class="logo" href="index.html">
-             <img src="resources/img/Logo2.png" alt="logo" width="60" height="60">
-           </a>
-         </div>
-
         <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="catalogo.html">Productos</a>
-            <a href="form_contacto.html">Contacto</a>
-            <a id="login" href="sesion.html">Login</a>
+            <a href="inicio">Inicio</a>
+            <a href="catalogo">Productos</a>
+            <a href="contacto">Contacto</a>
+            
         </nav>
 
     </div>
@@ -48,7 +43,7 @@
             <div class="footer-column">
               <h3>Enlaces</h3>
               <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inicio">Inicio</a></li>
                 <li><a href="contacto.html">Contactanos</a></li>
               </ul>
             </div>
@@ -75,5 +70,7 @@
           </div>
         </div>
       </footer>
+
+    <link rel="stylesheet" href="{% static '/css/nosotros.css' %}">
 </body>
 </html>

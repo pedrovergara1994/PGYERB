@@ -13,6 +13,13 @@ def init():
 
 
 def index(request):
+    
+    
+    email =    request.session.get('cli-email') 
+    if email :
+        return render(request, 'appweb/index.html', {"first_name": request.session.get('cli-name'),
+                                                     "last_name":  request.session.get('cli-last_name')})
+    
     return render(request, 'appweb/index.html', {})
 
 
@@ -26,3 +33,6 @@ def login(request):
 
 def register(request):
     return render(request, 'appweb/session/register.html', {})
+
+def contacto(request):
+    return render(request, 'appweb/contacto.html', {})

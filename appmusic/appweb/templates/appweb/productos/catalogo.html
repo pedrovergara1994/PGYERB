@@ -10,16 +10,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Catalogo</h1>
-    <a href="crearinstrumento">Ingresar instrumentos</a>
 
-    <div id="carrito-overlay">
+    <nav class="navbar">
+        <h1>Catalogo</h1>
+        <a href="inicio">inicio</a>
+        <a href="crearinstrumento">Ingresar instrumentos</a>
         <div id="carrito">
-            <a href="{% url 'carrito_eliminar' %}" >Eliminar carrito</a>
+            
             <ul id="lista-carrito"></ul>
           <p id="total-carrito"></p>
           <a href="{% url 'carrito_micarrito' %}" >Ir a mi carro de compras</a>
         </div>
+    </nav>
+                
+    <div id="carrito-overlay">
+        
       </div>
      
 
@@ -43,6 +48,38 @@
     <link rel="stylesheet" href="{% static '/css/catalogo.css' %}">
     <script src="{% static 'localStorage.js' %}"></script>
 
-
+     <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-column">
+              <h3>Enlaces</h3>
+              <ul>
+                <li><a href="inicio">Inicio</a></li>
+                <li><a href="contacto">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Contacto</h3>
+              <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 5 Norte </li>
+                <li><i class="fas fa-phone"></i> +56956101733</li>
+                <li><i class="fas fa-envelope"></i> Solomusica.ayuda@gmail.com</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Síguenos</h3>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>Derechos de autor &copy; 2023 | Solo Musica</p>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

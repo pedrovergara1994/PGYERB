@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,15 +10,11 @@
 </head>
 <body>
     <div class="head">
-        <div class="logo">
-            <a class="logo" href="index.html">
-                <img src="resources/img/Logo2.png" alt="logo" width="60" height="60">
-            </a>
-        </div>
+      
         <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="Nosotros.html">Nosotros</a>
-            <a href="form_contacto.html">Contacto</a>
+            <a href="inicio">Inicio</a>
+            <a href="nosotros">Nosotros</a>
+            
         </nav>
     </div>
     <div class="container">
@@ -78,7 +75,7 @@
         <div class="footer-column">
           <h3>Enlaces</h3>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="inicio ">Inicio</a></li>
             <li><a href="Nosotros.html">Acerca de nosotros</a></li>
           </ul>
         </div>
@@ -105,5 +102,6 @@
       </div>
     </div>
   </footer>
+  <link rel="stylesheet" href="{% static '/css/contacto.css' %}">
 </body>
 </html>
