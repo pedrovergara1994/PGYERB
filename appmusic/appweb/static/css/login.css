@@ -1,43 +1,77 @@
 body {
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    justify-content: center;
+    background-color: #dcdc39;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
     text-align: center;
-    align-items: center;
-    justify-items: center;
-    display: flow-root;
-}
-
-.box {
+    color: #333;
+  }
+  
+  .box {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #777;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
     width: 100%;
-    height: 30%;
-    justify-content: center;
-    display: flex;
-}
-
-input[type=text], input[type=password], textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #c4bb3cce;
+  }
+  
+  .loginBtn {
+    display: block;
     width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
+    padding: 10px;
+    background-color: #c4bb3cce;
     border: none;
-    background: #f1f1f1;
-}
-input[type=text]:focus, input[type=password]:focus {
-    background-color: aquamarine;
-    outline: none;
-}
-
-.loginBtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .loginBtn:hover {
+    background-color: #c4bb3cce;
+  }
+  
+  .btnfn {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .btnfn a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  
+  .btnfn a:hover {
+    color: #333;
+  }

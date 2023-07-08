@@ -6,16 +6,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Carrito</title>
 </head>
 <body>
 <nav class="navbar">
-        <h1>Carrito</h1>
-        <a href="inicio">inicio</a>
-        <a href="catalogo">Ir a Catalogo</a> 
+         <div class="logo">
+      <a class="logo" href="inicio">
+       <img src="/static/img/Logo2.png" alt="logo" width="50" height="50">
+     </a>
+    </div>
+        <a href="inicio">Inicio</a>
+        <a href="catalogo">Ir a catalogo</a> 
         <a href="{% url 'carrito_eliminar' %}" >Eliminar carrito</a> 
     </nav>
-    
+    <h1>Carrito</h1>
     {% if micarrito %}
     <span><h2>Total: ${{ total }}</h3>
     <span>
@@ -37,7 +41,7 @@
     {% endfor %}
     
     {% else %}
-    <h1>Carrito vacio</h1>
+    <h3>Su carrito esta vacio</h3>
 {% endif%}
 
 <link rel="stylesheet" href="{% static '/css/carrito.css' %}">

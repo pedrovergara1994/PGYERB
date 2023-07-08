@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
     {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Nosotros</title>
 </head>
 <body>
     <div class="head">
-
+    
         <nav class="navbar">
+        <div class="logo">
+      <a class="logo" href="inicio">
+       <img src="/static/img/Logo2.png" alt="logo" width="50" height="50">
+       <script src="static/js/server.js"></script>
+     </a>
+    </div>
             <a href="inicio">Inicio</a>
             <a href="catalogo">Productos</a>
             <a href="contacto">Contacto</a>
@@ -19,21 +26,37 @@
         </nav>
 
     </div>
-    <h1>Nosotros</h1>
-
+    
    <div class="presentacion">
-    <p>Somos una empresa familiar dedicada a la venta de instrumentos musicales, equipos de audio profesional e iluminación.
-        Nuestra empresa fue fundada como un sueño de nuestro padre y abuelo en el año 1982 , en Valparaíso. Con el tiempo hemos agrandado este sueño, hemos evolucionado, adaptado y adquirido experiencia basada en los años que tenemos dentro del rubro. Hoy contamos con un sólido equipo de profesionales , el respaldo garantizado de las mejores marcas del mercado, presencia en redes sociales y una página web activa.
-        
-        Mantenemos un stock variado de instrumentos musicales (cuerda, viento, percusión, folckloricos, mapuches, de banda, pianos y teclados, amplificación, home studio y más). Todos nuestros productos garantizan la mejor calidad ya que trabajamos con marcas profesionales que nos respaldan, tales como Ernie Ball, Yamaha, Casio, Alesis y Shure entre otras.
-        
-        Además, adaptándonos a la época hemos activado el marketing digital y ofrecemos nuestros productos a través de los principales marketplace del país como lo son Ripley, Falabella y Paris.cl, también somos parte de Mercado Público a través de Convenio de Marco.
-        Con esfuerzo, hemos mantenido en el tiempo nuestra sucursal en Valparaíso pero recuerda que realizamos envíos a todo Chile continental.
-        Nuestro compromiso es guiarte técnicamente y crear una propuesta acorde a tus necesidades y presupuesto, que tu experiencia de compra se vuelva cercana, siéntete libre de tomar esa decisión correcta ya que estaremos en todo momento para aclarar tus dudas.
-        Si quieres realizar alguna petición especial, puedes escribirnos a Solomusica.ayuda@gmail.com</p>
+   <h1>Nosotros</h1>
+      <div class="box">
+        <p>Somos una empresa familiar dedicada a la venta de instrumentos musicales, equipos de audio profesional e iluminación.<br>
+            Nuestra empresa fue fundada como un sueño de nuestro padre y abuelo en el año 1982 , en Valparaíso.<br>
+            Con el tiempo hemos agrandado este sueño, hemos evolucionado, adaptado y adquirido experiencia basada en los años que tenemos dentro del rubro.<br>
+            Hoy contamos con un sólido equipo de profesionales , el respaldo garantizado de las mejores marcas del mercado, presencia en redes sociales y una página web activa.<br>
+            Mantenemos un stock variado de instrumentos musicales (cuerda, viento, percusión, folckloricos, mapuches, de banda, pianos y teclados, amplificación, home studio y más).<br>
+            Todos nuestros productos garantizan la mejor calidad ya que trabajamos con marcas profesionales que nos respaldan, tales como Ernie Ball, Yamaha, Casio, Alesis y Shure entre otras.<br>
+            
+            Además, adaptándonos a la época hemos activado el marketing digital y ofrecemos nuestros productos a través de los principales marketplace del país como lo son Ripley, Falabella y Paris.cl,<br>
+            también somos parte de Mercado Público a través de Convenio de Marco.<br>
+            Con esfuerzo, hemos mantenido en el tiempo nuestra sucursal en Valparaíso pero recuerda que realizamos envíos a todo Chile continental.<br>
+            Nuestro compromiso es guiarte técnicamente y crear una propuesta acorde a tus necesidades y presupuesto, que tu experiencia de compra se vuelva cercana,<br>
+            siéntete libre de tomar esa decisión correcta ya que estaremos en todo momento para aclarar tus dudas.<br>
+            Si quieres realizar alguna petición especial, puedes escribirnos a Solomusica.ayuda@gmail.com</p>
+      </div>
     </div>
 
+    <section class="content contact">
+        
+        
+      <figure class="map">
+        <lu id="idimg"> </lu>
+           
+      </figure>
+  </section>
 
+
+  <h2>imagen generada por api</h2 >
       
         
     </body>
@@ -44,7 +67,7 @@
               <h3>Enlaces</h3>
               <ul>
                 <li><a href="inicio">Inicio</a></li>
-                <li><a href="contacto.html">Contactanos</a></li>
+                <li><a href="nosotros">Acerca de nosotros</a></li>
               </ul>
             </div>
             <div class="footer-column">
@@ -72,5 +95,5 @@
       </footer>
 
     <link rel="stylesheet" href="{% static '/css/nosotros.css' %}">
-</body>
+
 </html>

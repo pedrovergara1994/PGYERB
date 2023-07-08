@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Ingresar_instrumentos</title>
 </head>
 <body>
 
@@ -40,10 +40,10 @@
         {% csrf_token %}
 
         <a href="{% url 'instrumento_save' %}">
-            <button type="submit" class="registerbtn">Registrarse</button>
+            <button type="submit" class="registerbtn">Registrar instrumento </button>
         </a>
         <br/>
-        <a href="catalogo">ir a Catalogo</a>
+        <a href="catalogo">ir a catalogo</a>
     
 </form>
 <link rel="stylesheet" href="{% static '/css/crear.css' %}">

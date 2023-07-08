@@ -17,5 +17,7 @@ const agregar = (producto) => {
 
     carrito.push(producto)
     guardarEnLocalStorage("carrito", carrito);
+    
 }
+
 

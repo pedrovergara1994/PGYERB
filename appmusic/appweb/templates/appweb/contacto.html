@@ -6,15 +6,27 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>contacto</title>
 </head>
 <body>
     <div class="head">
       
         <nav class="navbar">
-            <a href="inicio">Inicio</a>
-            <a href="nosotros">Nosotros</a>
-            
+          <div class="logo">
+          <a class="logo" href="inicio">
+          <img src="/static/img/Logo2.png" alt="logo" width="50" height="50">
+          </a>
+          </div>
+          <a href="inicio">Inicio</a>
+          <a href="nosotros">Nosotros</a>
+            {% if first_name %}
+              <a href="micuenta">Mi Cuenta</a>
+              <a href="carrito">Carrito</a>
+              <a href="logout"><input type="submit">Logout</input></a>  
+          {% else %}
+              <a href="login">Login</a>
+          {% endif %}
+        
         </nav>
     </div>
     <div class="container">
